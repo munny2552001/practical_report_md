@@ -7,7 +7,7 @@
 
 ## BRANCH-COMPUTER SCIENCE AND ENGINEERING
 ## SECTION-CS(A2)
-## Submitted to : Prof Hardeep Singh
+##SUBMITTED TO : Prof Hardeep Singh
 
 ## 1.Program to print Hello World
 ----
