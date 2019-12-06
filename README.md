@@ -413,15 +413,22 @@ Enter two operands: 1.5
 ## 14. SUM OF TWO NUMBERS
  ----
 #include<stdio.h>
-void main()
-{
-        int a,b;
-        printf("enter the two number to be added\n");
-        scanf("%d%d",&a,&b);
-        printf("Sum  : %d + %d = %d \n",a,b,a+b);
-
+ 
+int main() {
+   int a, b, sum;
+ 
+   printf("\nEnter two no: ");
+   scanf("%d %d", &a, &b);
+ 
+   sum = a + b;
+ 
+   printf("Sum : %d", sum);
+ 
+   return(0);
 }
-
+## output 
+Enter two no: 5 6
+Sum : 11
 ## 15. Program of Multiplication of 3x3 Matrix
 ----
 #include <stdio.h>
