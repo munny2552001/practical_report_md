@@ -1,28 +1,32 @@
 # PROGRAMMING FOR PROGRAM SOLVING ESC-18105
-***NAME-MANJOT SINGH SRAN
-ROLL NO-1915048***
-
-**BRANCH-COMPUTER SCIENCE
+----
+# NAME-MANJOT SINGH SRAN
+----
+ROLL NO-1915048
+----
+BRANCH-COMPUTER SCIENCE
+----
 SECTION-CS(A2)
-Submitted to : Prof Hardeep Singh**
-
-
-
-
-
-# 1.*Program to print Hello World*
+----
+Submitted to : Prof Hardeep Singh
+----
+#  1.Program to print Hello World
+----
 #include <stdio.h>
 int main()
 {
     printf("HELLO WORLD");
     return 0;
 }
+
+----
 # Output of the program
+----
+
 Hello World
-
-
-# *2. Program to find Sum*
-
+----
+# 2. Program to find Sum
+----
 #include<stdio.h>
 int main()
 {
@@ -36,17 +40,20 @@ int main()
      printf("\nAnswer is: = %.3f", z);
      return 0;
 }
-#  Output of the program
+
+----
+# **Output of the program**
+----
+
 Enter The First Number: 45.26
 
 Enter The Second Number: 78.2648
 
 Answer is: = 123.525
-
-
-# **3. Program to print a Table**
-
- #include<stdio.h>
+----
+# 3. Program to print a Table
+----
+#include<stdio.h>
 int main()
 {
      float x;
@@ -65,7 +72,10 @@ int main()
      return 0;
 }
 
+----
 # Output of the program
+----
+
 73.0 x 1 = 73.00
 73.0 x 2 = 146.00
 73.0 x 3 = 219.00
@@ -74,8 +84,9 @@ int main()
 73.0 x 6 = 438.00
 73.0 x 7 = 511.00
 
-
-# **4. Program to find Area, Perimeter of a Rectangle**
+----
+# 4. Program to find Area, Perimeter of a Rectangle
+----
 #include <stdio.h>
 int main()
 {
@@ -94,17 +105,20 @@ int main()
 
 }
 
+----
 # Output of the program
+----
+
 Enter length: 24
 
 Enter Breadth: 60
 
 Area: = 1440.000
-
 Perimeter: = 168.000
 
-
+----
 # 5. Program to find Interest
+----
 #include <stdio.h>
 int main()
 {
@@ -120,8 +134,11 @@ int main()
      printf("\nSimple Intesest is: = %.2f", Interest);
      return Interest;
      }
-     
-#      Output of the program
+
+----
+#  Output of the program
+----
+
 Enter The Principal Amount: 4000
 
 Enter The Interest Rate: 4
@@ -130,7 +147,9 @@ Enter The Time (in months): 3
 
 Simple Intesest is: = 480.00
 
+----
 # 6.Program to find Maximum
+----
 #include <stdio.h>
 int main()
 {
@@ -153,14 +172,20 @@ int main()
      return 0;
 
 }
-# Output of the program
+
+----
+#  Output of the program
+----
+
 Enter The First Value: 5
 
 Enter The Second Value: 4
 
 Maximum value is: 5.00
 
+----
 # 7.Program To find Minimum
+----
 #include<stdio.h>
 int min(float x,float y);
 int main()
@@ -180,7 +205,6 @@ int main()
 
      return 0;
 }
-
 int min(float x,float y)
 {
      float result;
@@ -192,14 +216,20 @@ int min(float x,float y)
 
      return result;
 }
-# Output of the program
+
+----
+#  Output of the program
+----
+
 Enter The First Value: 5
 
 Enter The SecondValue: 3
 
 Minimum value is: 3.00
 
+----
 # 8.Program to use Arithmetic Operators
+----
 int main()
 {
      float x,y,a;
@@ -225,7 +255,11 @@ int main()
 
      return 0;
 }
+
+----
 # Output of the program
+----
+
 Enter The Value of x: 45
 
 Enter The Value of y: 31
@@ -236,7 +270,9 @@ x * y = 1395.000
 x/y = 1.452
 y/x = 0.689
 
+----
 # 9. Program to use Assignment Operators
+----
 #include<stdio.h>
 int main()
 {
@@ -259,7 +295,11 @@ int main()
 
      return 0;
 }
+
+----
 # Output of the program
+----
+
 Enter The Value of x: 45
 Answer is a = x 45.000
 Answer is a+x = 90.000
@@ -267,7 +307,9 @@ Answer is a-x = 45.000
 Answer is a*x = 2025.000
 Answer is a/x= 45.000
 
+----
 # 10. Program to find Average
+----
 #include <stdio.h>
 int main()
 {
@@ -287,14 +329,19 @@ int main()
       printf("\nAverage is: %.2f",a);
      return 0;
 }
+
+----
 # Output of the program
+----
+
 Enter The First Value: 45
 Enter The Second Value: 34
 Enter The Third Value: 18
 
 Average is: 32.33
-
+----
 # 11. Program to find FizzBuzz number
+----
 #include<stdio.h>
 int main()
 {
@@ -312,11 +359,18 @@ int main()
      printf("\n%d",n);
      return 0;
 }
+
+----
 # Output of the program
+----
+
 Enter the Interger: 171
 Fizz
 
+----
 # 12. Program of print a Calculator using puts function
+
+----
 #include<stdio.h>
 void main()
 {
@@ -331,7 +385,11 @@ void main()
      |     0     | * |\n\
      |___________|___|\n");
 }
+
+----
 # Output of the program
+----
+
  _______________
 | 1 | 2 | 3 |   |
 |___|___|___|   |
@@ -342,8 +400,9 @@ void main()
 |     0     | * |
 |___________|___|
 
-
+----
 # 13. Program of Multiplication of 2x2 Matrix
+----
 #include<stdio.h>
 int main()
 {
@@ -378,7 +437,12 @@ Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n
 
      return 0;
 }
+
+----
 # Output of the program
+
+----
+
 Sample of Ist matrix: | a=1      b=2 |
                       | c=3      d=4 |
 
@@ -396,7 +460,11 @@ Enter The Valve of h: 1
 
 Multiplication of A,B is: | 66.00         40.00 |
                           | 12.00         20.00 |
-# 14. Program of FizzBuzz in a continues loop
+                          
+
+----
+# 14.Program of FizzBuzz in a continues loop
+----
 #include<stdio.h>
 int main()
 {
@@ -419,7 +487,11 @@ int main()
 
      return 0;
 }
+
+----
 # Output of the program
+----
+
 Enter The Integer: 17
 
 1
@@ -440,7 +512,10 @@ FizzBuzz
 16
 17
 
+----
 # 15.  PROGRAM TO CHECK WHETHER THE NUMBER IS EVEN OR ODD
+
+----
 #include <stdio.h>  
 int oddeven(int num1);
 int main ()
@@ -460,8 +535,16 @@ printf ("The number is odd:");
 return 0;
 }
 
- 
+----
+
+# Output of the program
+----
+Enter the no : 45
+no is odd
+
+----
 # 16. Program of Linear search for One Dimensional array
+----
 #include<stdio.h>
 int main()
 
@@ -488,7 +571,11 @@ for(int i=0;i<size;i++)
     
     return 0;
 }
+
+----
 # Output of the program
+----
+
 First Case
 
 Enter the Value to be searched: 5
@@ -500,7 +587,9 @@ Enter the Value to be searched: 2
 
 Search is Unsucessfull 2 Element is not present in the array
 
+----
 # 17. Program of linear search with desirable values
+----
 #include<stdio.h>
 int main()
 {
@@ -529,7 +618,12 @@ scanf("%d",&search);
 
 return 0;
 }
+
+----
 # Output of the program
+
+----
+
 Enter the Number of elements in array: 5
 
 Enter [1] element: 1
@@ -542,7 +636,10 @@ Enter a number to search: 8
 
 8 is not present in the array
 
+----
 # 18. PROGRAM TO FIND FACTORIAL OF A NUMBER
+
+----
 #include <stdio.h> 
 void main() 
 { 
@@ -554,11 +651,16 @@ n=n*a;
 printf("factorial of i is %d \n",n); 
 } 
 
+----
 # OUTPUT
+----
+
 enter i : 5
 factorial of i is 120
 
+----
 # 19.Program to convert farenhiet to celcius
+----
 #include<stdio.h> 
 int main() 
 { 
@@ -570,12 +672,17 @@ printf("The coverted value of  %f farenhiet is : %f Celsius\n",f,c);
 return 0; 
 } 
 
-# Output of the program
+----
+#  Output of the program
+----
+
 Enter the magnitude of radius of circle :3
 Area of the circle is 28.268999 
-perimeter of  the circle is 18.846001 
+perimeter of  the circle is 18.846001
 
+----
 # 20. Program to find Prime number
+----
 #include<stdio.h>
   int main()
   { 
@@ -594,14 +701,20 @@ perimeter of  the circle is 18.846001
     }
   return 0;
   }
-#   Output of the program
+
+----
+#  Output of the program
+----
+
  Enter the Number: 7
   7 is not a Prime Number
 
   Enter the Number: 8
   8 is not a Prime Number
   
+----
 # 21. Program to swap using call by reference.
+----
 #include <stdio.h>
 int swap(int ,int );
 int main()
@@ -622,13 +735,18 @@ int swap(int a,int b)
  printf("After swapping : %d %d\n",*y,*x);
  return 0;
 }
+
+----
 # Output of the program
+----
+
 Enter the two numbers : 8 5
 Before swaping 8 5
 After swapping : 5 8
 
-  
+----
 # 22.Program to check whether year is leap or not
+----
 #include<stdio.h>
 
 int main()
@@ -643,11 +761,18 @@ printf(" not a leap year\n");
 return 0;
 }
 
+----
+
+
 # Output of the program
+----
+
 Enter the year u want to check it for leap :2016 
 it is a leap year
 
+----
 # 23.Program to check whether number is palindrome or not
+----
 #include<stdio.h>
 
 int main()
@@ -668,11 +793,15 @@ else
 printf("it is not a palindrome no\n");
 return 0;
 }
-# Output of the program
+
+----
+#   Output of the program
 Enter the no : 121
 it is a palindrome no
 
+----
 # 24.Program to display fibonacchi series
+----
 #include<stdio.h>
 
 int main()
@@ -691,11 +820,21 @@ b=c;
 return 0;
 }
 
+
+----
 # Output of the program
+----
+
 Enter the  no of fibonachi terms u want to print: 10
 0       1       1       2       3       5       8       13      21      34 
+
+----
+
                    
-- [ ]                                       **ThankYou**
+#                                       **Thank you**
+
+       
+
 
 
 
