@@ -620,35 +620,32 @@ Enter item to search: 89
 Item found at location 4
 ## 20. CHECK PALINDROME NUMBER
 ----
-#include<stdio.h>
-int main()
-{
-        int sum=0,digit;
-        int n, temp;
-        printf("enter any positive integer number\n");
-        scanf("%d",&n);
-        temp=n;
-        while(temp>0)
-        {
-                digit=temp%10;
-                temp/=10;
-                sum=sum*10+digit;
-        }
-        if(n==sum)
-                printf("\n %d is a palidrome number\n",n);
-        else
-                printf("\n %d is not a palidrome number\n",n);
+#include <stdio.h>
+int main() {
+    int n, reversedN = 0, remainder, originalN;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    originalN = n;
+
+    // reversed integer is stored in reversedN
+    while (n != 0) {
+        remainder = n % 10;
+        reversedN = reversedN * 10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignalN and reversedN are equal
+    if (originalN == reversedN)
+        printf("%d is a palindrome.", originalN);
+    else
+        printf("%d is not a palindrome.", originalN);
+
+    return 0;
 }
+
 ## Output of the program
-enter any positive integer number
-12321   
-        
- 12321 is a palidrome number
--------------------------------------------------------------------------
-enter any positive integer number
-12654   
-        
- 12654 is not a palidrome number
+Enter an integer: 1001
+1001 is a palindrome.
 ## 21. Program to find Prime number 
 ----
 #include <stdio.h>
@@ -684,85 +681,66 @@ Enter a positive integer: 29
 
   ## 22. CALL BY VALUE ----
 #include <stdio.h>
-void swap(int a,int b);
-void main()
-{
-int x,y;
-printf("\n Enter value for x:");
-scanf("%d",&x);
-printf("\n Enter value for y:");
-scanf("%d",&y);
-printf("\n Before calling swap functin\n");
-printf("\n Value of x=%d,Value of y=%d\n",x,y);
-swap(x,y);
-printf("\n After returning from swap function");
-printf("\n Value of x=%d,value of y=%d\n",x,y);
-}
-void swap(int a,int b)
-{
-int temp;
-printf("\n Inside the function \n");
-printf("\n Value of a=%d,Value of b=%d before swaping\n",a,b);
-temp=a;
-a=b;
-b=temp;
-printf("\n Value of a=%d,Value of b=%d after swaping\n",a,b);
+ 
+/* function declaration */
+void swap(int x, int y);
+ 
+int main () {
+
+   /* local variable definition */
+   int a = 100;
+   int b = 200;
+ 
+   printf("Before swap, value of a : %d\n", a );
+   printf("Before swap, value of b : %d\n", b );
+ 
+   /* calling a function to swap the values */
+   swap(a, b);
+ 
+   printf("After swap, value of a : %d\n", a );
+   printf("After swap, value of b : %d\n", b );
+ 
+   return 0;
 }
 ## Output of the program
-Enter value for x:8
-
- Enter value for y:6
-
- Before calling swap functin
-
- Value of x=8,Value of y=6
-
- Inside the function 
-
- Value of a=8,Value of b=6 before swaping
- Value of a=6,Value of b=8 after swaping
-
- After returning from swap function
- Value of x=8,value of y=6
+Before swap, value of a :100
+Before swap, value of b :200
+After swap, value of a :100
+After swap, value of b :200
  
 ## 23. CALL BY REFERENCE
 ----
-#include<stdio.h>
-void swap(int *,int *);
-void main()
+#include 
+void swapnum ( int *var1, int *var2 )
 {
-int x,y;
-printf("\n Enter value for x:");
-scanf("%d",&x);
-printf("\n Enter value for y:");
-scanf("%d",&y);
-printf("\n Before calling swap functin\n");
-printf("\n Value of x=%d,Value of y=%d\n",x,y);
-swap(&x,&y);
-printf("\n After returning from swap function");
-printf("\n Value of x=%d,value of y=%d\n",x,y);
+   int tempnum ;
+   tempnum = *var1 ;
+   *var1 = *var2 ;
+   *var2 = tempnum ;
 }
-void swap(int *a,int *b)
+int main( )
 {
-int temp;
-printf("\n Inside the function \n");
-printf("\n Value of a=%d,Value of b=%d before swaping\n",*a,*b);
-temp=*a;
-*a=*b;
-*b=temp;
-printf("\n Value of a=%d,Value of b=%d after swaping\n",*a,*b);
+   int num1 = 35, num2 = 45 ;
+   printf("Before swapping:");
+   printf("\nnum1 value is %d", num1);
+   printf("\nnum2 value is %d", num2);
+
+   /*calling swap function*/
+   swapnum( &num1, &num2 );
+
+   printf("\nAfter swapping:");
+   printf("\nnum1 value is %d", num1);
+   printf("\nnum2 value is %d", num2);
+   return 0;
 }
 
 ## Output of the program
-Enter value for x:6
- Enter value for y:7
- Before calling swap functin
- Value of x=6,Value of y=7
- Inside the function 
- Value of a=6,Value of b=7 before swaping
- Value of a=7,Value of b=6 after swaping
- After returning from swap function
- Value of x=7,value of y=6
+Before swapping:
+num1 value is 35
+num2 value is 45
+After swapping:
+num1 value is 45
+num2 value is 35
 ## 23. EMPLOYEE DETAILS USING STRUCTURE-----
 #include <stdio.h>
 #include <stdlib.h>
