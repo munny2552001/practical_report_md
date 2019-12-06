@@ -11,92 +11,83 @@
 
 ## 1.Program to print Hello World
 ----
-
-#include<stdio.h>
-int main()
-{
- puts("Hello World");
- return 0;
+#include <stdio.h>
+int main() {
+      printf("Hello, World!");
+   return 0;
 }
 ##  Output of the program
-Hello World 
+Hello, World!
 
 ----
 
 ## 2. Program to find Sum
 ----
+#include <stdio.h>
+int main() {    
 
-#include<stdio.h>
-int main()
-{ 
-     float x,y,z;
+    int number1, number2, sum;
+    
+    printf("Enter two integers: ");
+    scanf("%d %d", &number1, &number2);
 
-     printf("Enter The First Number: ");
-     scanf("%f", &x);
-     printf("\nEnter The Second Number: ");
-     scanf("%f", &y);
-     z = x+y;
-     printf("\nAnswer is: = %.3f", z);
-     return 0;
+    // calculating sum
+    sum = number1 + number2;      
+    
+    printf("%d + %d = %d", number1, number2, sum);
+    return 0;
 }
 ## Output of the program
-Enter The First Number: 45.26
+Enter The First Number: 45
 
-Enter The Second Number: 78.2648
+Enter The Second Number: 78
 
-Answer is: = 123.525
+Answer is: = 123
 ## 3. Program to print a Table
-----
-
-#include<stdio.h>
-int main()
-{
-     float x;
-     int n;
-
-     printf("\nEnter The Table: ");
-     scanf("%f",&x);
-
-     printf("\nEnter No. Times: ");
-     scanf("%d",&n);
-
-     for(int y=1; y<=n; y++)
-     {
-     printf("\n%.1f x %d = %.2f",x,y,x*y);
-     }
-     return 0;
+---- 
+#include <stdio.h>
+int main() {
+    int n, i;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    for (i = 1; i <= 10; ++i) {
+        printf("%d * %d = %d \n", n, i, n * i);
+    }
+    return 0;
 }
+
 ## Output of the program
 ----
+Enter an integer: 9
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+9 * 6 = 54
+9 * 7 = 63
+9 * 8 = 72
+9 * 9 = 81
+9 * 10 = 90
 
-73.0 x 1 = 73.00
-73.0 x 2 = 146.00
-73.0 x 3 = 219.00
-73.0 x 4 = 292.00
-73.0 x 5 = 365.00
-73.0 x 6 = 438.00
-73.0 x 7 = 511.00
 ## 4. Program to find Area, Perimeter of a Rectangle
 ----
+#include <stdio.h>
 
-#include<stdio.h>
 int main()
 {
-     float l,b,A,P;
+    float length, width, perimeter;
 
-     printf("Enter length\n: ");
-     scanf("%f",&l);
+       printf("Enter length of the rectangle: ");
+    scanf("%f", &length);
+    printf("Enter width of the rectangle: ");
+    scanf("%f", &width);
 
-     printf("Enter Bredth\n: ");
-     scanf("%f",&b);
+        perimeter = 2 * (length + width);
 
-     A = l*b;
-     P = 2*(l+b);
+      printf("Perimeter of rectangle = %f units ", perimeter);
 
-     printf("Area: = %.3f\n",A);
-     printf("Perimeter: = %.3f\n",P);
-
-     return 0;
+    return 0;
 }
 ## Output of the program
 Enter length: 24
@@ -108,25 +99,31 @@ Area: = 1440.000
 Perimeter: = 168.000
 ## 5. Program to find Interest
 ----
+#include <stdio.h>
 
-#include<stdio.h>
 int main()
 {
-     float P,R,T,Interest;
-     printf("\nEnter The Principal Amount: ");
-     scanf("%f", &P);
+    float principle, time, rate, SI;
 
-     printf("\nEnter The Interest Rate: ");
-     scanf("%f", &R);
-    
-     printf("\nEnter The Time (in months): ");
-     scanf("%f", &T);
+    /* Input principle, rate and time */
+    printf("Enter principle (amount): ");
+    scanf("%f", &principle);
 
-     Interest = P*T*R/100;
-    
-     printf("\nSimple Intesest is: = %.2f", Interest);
-     return Interest;
+    printf("Enter time: ");
+    scanf("%f", &time);
+
+    printf("Enter rate: ");
+    scanf("%f", &rate);
+
+    /* Calculate simple interest */
+    SI = (principle * time * rate) / 100;
+
+    /* Print the resultant value of SI */
+    printf("Simple Interest = %f", SI);
+
+    return 0;
 }
+
 ## Output of the program
 Enter The Principal Amount: 4000
 
@@ -137,388 +134,455 @@ Enter The Time (in months): 3
 Simple Intesest is: = 480.00
 ## 6.Program to find Maximum 
 ----
+#include <stdio.h>
 
-#include<stdio.h>
-int max(float x,float y);
+#define MAX_SIZE 100   // Maximum array size
+
 int main()
 {
-     float x,y,z;
+    int arr[MAX_SIZE];
+    int i, max, min, size;
 
-     printf("\nEnter The First Value: ");
-     scanf("%f",&x);
+    /* Input size of the array */
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
 
-     printf("\nEnter The Second Value: ");
-     scanf("%f",&y);
+    /* Input array elements */
+    printf("Enter elements in the array: ");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
 
-     z = max(x,y);
 
-     printf("\nMaximum value is: %.2f\n", z);
+    /* Assume first element as maximum and minimum */
+    max = arr[0];
+    min = arr[0];
 
-     return 0;
-  }
-     int max(float x,float y)
-  {
-     float result;
+    /*
+     * Find maximum and minimum in all array elements.
+     */
+    for(i=1; i<size; i++)
+    {
+        /* If current element is greater than max */
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
 
-     if(x<y)
-     result = y;
-     else
-     result = x;
+        /* If current element is smaller than min */
+        if(arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
 
-     return result;
+    /* Print maximum and minimum element */
+    printf("Maximum element = %d\n", max);
+    printf("Minimum element = %d", min);
+
+    return 0;
 }
+
 ## Output of the program
-Enter The First Value: 5
-
-Enter The Second Value: 4
-
-Maximum value is: 5.00
+Enter size of the array: 10
+Enter elements in the array: -10 10 0 20 -2 50 100 20 -1 10
+Maximum element = 100
+Minimum element = -10
 ## 7.Program To find Minimum 
 ----
+#include <stdio.h>
 
-#include<stdio.h>
-int min(float x,float y);
+#define MAX_SIZE 100   // Maximum array size
+
 int main()
-
 {
-     float x,y,z;
+    int arr[MAX_SIZE];
+    int i, max, min, size;
 
-     printf("\nEnter The First Value: ");
-     scanf("%f",&x);
+    /* Input size of the array */
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
 
-     printf("\nEnter The SecondValue: ");
-     scanf("%f",&y);
+    /* Input array elements */
+    printf("Enter elements in the array: ");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
 
-     z = min(x,y);
 
-     printf("\nMinimum value is: %.2f\n", z);
+    /* Assume first element as maximum and minimum */
+    max = arr[0];
+    min = arr[0];
 
-     return 0;
+    /*
+     * Find maximum and minimum in all array elements.
+     */
+    for(i=1; i<size; i++)
+    {
+        /* If current element is greater than max */
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
+
+        /* If current element is smaller than min */
+        if(arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+
+    /* Print maximum and minimum element */
+    printf("Maximum element = %d\n", max);
+    printf("Minimum element = %d", min);
+
+    return 0;
 }
 
-int min(float x,float y)
-{
-     float result;
 
-     if(x<y)
-     result = x;
-     else
-     result = y;
-
-     return result;
-}
 ## Output of the program
-Enter The First Value: 5
+Enter size of the array: 10
+Enter elements in the array: -10 10 0 20 -2 50 100 20 -1 10
+Maximum element = 100
+Minimum element = -10
 
-Enter The SecondValue: 3
-
-Minimum value is: 3.00
 ## 8.Program to use Arithmetic Operators  
 ----
+#include <stdio.h>
 
-#include<stdio.h>
 int main()
 {
-     float x,y,a;
+    int num1, num2;
+    int sum, sub, mult, mod;
+    float div;
 
-     printf("\nEnter The Value of x: ");
-     scanf("%f",&x);
+    /*
+     * Input two numbers from user
+     */
+    printf("Enter any two numbers: ");
+    scanf("%d%d", &num1, &num2);
 
-     printf("\nEnter The Value of y: ");
-     scanf("%f",&y);
+    /*
+     * Perform all arithmetic operations
+     */ 
+    sum = num1 + num2;
+    sub = num1 - num2;
+    mult = num1 * num2;
+    div = (float)num1 / num2;
+    mod = num1 % num2;
 
-     a = x+y;
-     printf("x + y = %.3f\n",a);
-     a = x-y;
-     printf("x - y = %.3f\n",a);
-     a = y-x;
-     printf("y - x = %.3f\n",a);
-     a = x*y;
-     printf("x * y = %.3f\n",a);
-     a = x/y;
-     printf("x/y = %.3f\n",a);
-     a = y/x;
-     printf("y/x = %.3f\n",a);
+    /*
+     * Print result of all arithmetic operations
+     */
+    printf("SUM = %d\n", sum);
+    printf("DIFFERENCE = %d\n", sub);
+    printf("PRODUCT = %d\n", mult);
+    printf("QUOTIENT = %f\n", div);
+    printf("MODULUS = %d", mod);
 
-     return 0;
+    return 0; 
 }
-## Output of the program
-Enter The Value of x: 45
 
-Enter The Value of y: 31
-x + y = 76.000
-x - y = 14.000
-y - x = -14.000
-x * y = 1395.000
-x/y = 1.452
-y/x = 0.689
+
+## Output of the program
+Enter any two numbers : 20 10
+SUM = 30
+DIFFERENCE = 10
+PRODUCT = 200
+QUOTIENT = 2.000000
+MODULUS = 0
 ## 9. Program to use Assignment Operators
 ----
-
-#include<stdio.h>
 int main()
 {
+    int a = 5, c;
 
-     float x,a;
+    c = a;      // c is 5
+    printf("c = %d\n", c);
+    c += a;     // c is 10 
+    printf("c = %d\n", c);
+    c -= a;     // c is 5
+    printf("c = %d\n", c);
+    c *= a;     // c is 25
+    printf("c = %d\n", c);
+    c /= a;     // c is 5
+    printf("c = %d\n", c);
+    c %= a;     // c = 0
+    printf("c = %d\n", c);
 
-     printf("\nEnter The Value of x: ");
-     scanf("%f",&x);
-
-     a = x;
-     printf("Answer is a = x %.3f\n",a);
-     a +=x; //answer is a+x
-     printf("Answer is a+x = %.3f\n",a);
-     a -=x; //answer is a-x
-     printf("Answer is a-x = %.3f\n",a);
-     a *=x; //answer is a*x
-     printf("Answer is a*x = %.3f\n",a);
-     a /=x; //answer is a/x
-     printf("Answer is a/x= %.3f\n",a);
-
-     return 0;
+    return 0;
 }
+
 ## Output of the program
-Enter The Value of x: 45
-Answer is a = x 45.000
-Answer is a+x = 90.000
-Answer is a-x = 45.000
-Answer is a*x = 2025.000
-Answer is a/x= 45.000
+c = 5 
+c = 10 
+c = 5 
+c = 25 
+c = 5 
+c = 0
 ## 10. Program to find Average
 ----
-
-#include<stdio.h>
-float average();
-
+#include <stdio.h>
 int main()
 {
-     printf("\nAverage is: %.2f",average());
-     return 0;
-  }
+    int num1, num2;
+    float avg;
 
-     float average()
-  {
-     float x,y,z,s,a;
+    printf("Enter first number: ");
+    scanf("%d",&num1);
+    printf("Enter second number: ");
+    scanf("%d",&num2);
 
-     printf("\nEnter The First Value: ");
-     scanf("%f",&x);
+    avg= (float)(num1+num2)/2;
 
-     printf("Enter The Second Value: ");
-     scanf("%f",&y);
+    //%.2f is used for displaying output upto two decimal places
+    printf("Average of %d and %d is: %.2f",num1,num2,avg);
 
-     printf("Enter The Third Value: ");
-     scanf("%f",&z);
-
-     s = x+y+z;
-     a = s/3;
-     return a;
+    return 0;
 }
 Output of the program
-Enter The First Value: 45
-Enter The Second Value: 34
-Enter The Third Value: 18
+Enter first number: 12
+Enter second number: 13
+Average of 12 and 13 is: 12.50
 
-Average is: 32.33
 ## 12. Program to find FizzBuzz od a Integer
 ----
+#include <stdio.h>
 
-#include<stdio.h>
-int main()
+int main(void)
 {
-     int n;
-     printf("\nEnter the Interger: ");
-     scanf("%d",&n);
+    int i;
+    for(i=1; i<=100; i++)
+    {
+        if(((i%3)||(i%5))== 0)
+            printf("number= %d FizzBuzz\n", i);
+        else if((i%3)==0)
+            printf("number= %d Fizz\n", i);
+        else if((i%5)==0)
+            printf("number= %d Buzz\n", i);
+        else
+            printf("number= %d\n",i);
 
-     if(n%15==0)
-     printf("\nFizzBuzz");
-     else if(n%3==0)
-     printf("Fizz\n");
-     else if (n%5==0)
-     printf("\nBuzz");
-     else
-     printf("\n%d",n);
-     return 0;
+    }
+
+    return 0;
 }
 ## Output of the program
 Enter the Interger: 171
 Fizz
-## 13. Program of print a Calculator using puts function 
+## 13. Program of print a Calculator
 ----
+#include <stdio.h>
+int main() {
+    char operator;
+    double first, second;
+    printf("Enter an operator (+, -, *,): ");
+    scanf("%c", &operator);
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &first, &second);
 
+    switch (operator) {
+    case '+':
+        printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+        break;
+    case '-':
+        printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+        break;
+    case '*':
+        printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+        break;
+    case '/':
+        printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+        break;
+        // operator doesn't match any case constant
+    default:
+        printf("Error! operator is not correct");
+    }
+
+    return 0;
+}
+## Output
+Enter an operator (+, -, *,): *
+Enter two operands: 1.5
+4.5
+1.5 * 4.5 = 6.8
+
+
+## 14. SUM OF TWO NUMBERS
+ ----
 #include<stdio.h>
 void main()
 {
-     puts("\n\
-      _______________\n\
-     | 1 | 2 | 3 |   |\n\
-     |___|___|___|   |\n\
-     | 4 | 5 | 6 | + |\n\
-     |___|___|___|___|\n\
-     | 7 | 8 | 9 | - |\n\
-     |___|___|___|___|\n\
-     |     0     | * |\n\
-     |___________|___|\n");
-}
-## Output of the program
- _______________
-| 1 | 2 | 3 |   |
-|___|___|___|   |
-| 4 | 5 | 6 | + |
-|___|___|___|___|
-| 7 | 8 | 9 | - |
-|___|___|___|___|
-|     0     | * |
-|___________|___|
-## 14. Program to print a Face using puts function 
-----
+        int a,b;
+        printf("enter the two number to be added\n");
+        scanf("%d%d",&a,&b);
+        printf("Sum  : %d + %d = %d \n",a,b,a+b);
 
-#include<stdio.h>
-void main()
-{
-     puts("________________");
-     puts("|   XXXXXXXXX  |");
-     puts("|   ( ^   ^ )  |");
-     puts("|   ( 0   0 )  |");
-     puts("|    \\  |  /   |");
-     puts("|     \\ = /    |");
-     puts("|      \\_/     |");
-     puts("|       |      |");
-     puts("|_______|______|\n");
 }
-## Output of the program
- ______________
-|   XXXXXXXXX  |
-|   ( ^   ^ )  |
-|   ( 0   0 )  |
-|    \  |  /   |
-|     \ = /    |
-|      \_/     |
-|       |      |
-|_______|______|
-## 15. Program of Multiplication of 2x2 Matrix
-----
 
-#include<stdio.h>
+## 15. Program of Multiplication of 3x3 Matrix
+----
+#include <stdio.h>
+ 
 int main()
 {
-float a,b,c,d,e,f,g,h,i,j,k,l;
-
-printf("\nSample of Ist matrix: | a=1      b=2 |\n                      | c=3      d=4 |\n\n\
-Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n\n");
-
-     printf("Enter The Valve of a: ");
-     scanf("%f",&a);
-     printf("Enter The Valve of b: ");
-     scanf("%f",&b);
-     printf("Enter The Valve of c: ");
-     scanf("%f",&c);
-     printf("Enter The Valve of d: ");
-     scanf("%f",&d);
-     printf("Enter The Valve of e: ");
-     scanf("%f",&e);
-     printf("Enter The Valve of f: ");
-     scanf("%f",&f);
-     printf("Enter The Valve of g: ");
-     scanf("%f",&g);
-     printf("Enter The Valve of h: ");
-     scanf("%f",&h); 
-
-     i=(a*e)+(b*g);
-     j=(a*f)+(b*h);
-     k=(c*e)+(d*g);
-     l=(c*f)+(d*h);
-
-     printf("\nMultiplication of A,B is: | %.2f     %.2f |\n                          | %.2f     %.2f |",i,j,k,l);
-
-     return 0;
-}
-## Output of the program
-Sample of Ist matrix: | a=1      b=2 |
-                      | c=3      d=4 |
-
-Sample of 2nd matrix: | e=5      f=6 |
-                      | f=7      h=8 |
-
-Enter The Valve of a: 7
-Enter The Valve of b: 5
-Enter The Valve of c: 4
-Enter The Valve of d: 0
-Enter The Valve of e: 3
-Enter The Valve of f: 5
-Enter The Valve of g: 9
-Enter The Valve of h: 1
-
-Multiplication of A,B is: | 66.00     40.00 |
-                          | 12.00     20.00 |
-## 17. Program of FizzBuzz in a continues loop 
-----
-
-#include<stdio.h>
-int main()
-{
-     int n,x;
-     printf("\nEnter The Integer: ");
-     scanf("%d",&n);
-     printf("\n");
-
+  int m, n, p, q, c, d, k, sum = 0;
+  int first[10][10], second[10][10], multiply[10][10];
+ 
+  printf("Enter number of rows and columns of first matrix\n");
+  scanf("%d%d", &m, &n);
+  printf("Enter elements of first matrix\n");
+ 
+  for (c = 0; c < m; c++)
+    for (d = 0; d < n; d++)
+      scanf("%d", &first[c][d]);
+ 
+  printf("Enter number of rows and columns of second matrix\n");
+  scanf("%d%d", &p, &q);
+ 
+  if (n != p)
+    printf("The multiplication isn't possible.\n");
+  else
   {
-     for(x=1;x<=n;x++)
-     if(x%15==0)
-     printf("FizzBuzz\n");
-     else if(x%3==0)
-     printf("Fizz\n");
-     else if(x%5==0)
-     printf("Buzz\n");
-     else
-     printf("%d\n",x);
+    printf("Enter elements of second matrix\n");
+ 
+    for (c = 0; c < p; c++)
+      for (d = 0; d < q; d++)
+        scanf("%d", &second[c][d]);
+ 
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++) {
+        for (k = 0; k < p; k++) {
+          sum = sum + first[c][k]*second[k][d];
+        }
+ 
+        multiply[c][d] = sum;
+        sum = 0;
+      }
+    }
+ 
+    printf("Product of the matrices:\n");
+ 
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++)
+        printf("%d\t", multiply[c][d]);
+ 
+      printf("\n");
+    }
   }
-
-     return 0;
+ 
+  return 0;
 }
-## Output of the program
-Enter The Integer: 17
+## output 
+Enter number of Rows of matrix a: 3 
+Enter number of Cols of matrix a: 3 
 
+Enter elements of matrix a: 
+Enter element [1,1] : 1 
+Enter element [1,2] : 2 
+Enter element [1,3] : 3 
+Enter element [2,1] : 4 
+Enter element [2,2] : 5 
+Enter element [2,3] : 6 
+Enter element [3,1] : 7 
+Enter element [3,2] : 8 
+Enter element [3,3] : 9 
+
+Enter number of Rows of matrix b: 3 
+Enter number of Cols of matrix b: 3 
+
+Enter elements of matrix b: 
+Enter element [1,1] : 1 
+Enter element [1,2] : 1 
+Enter element [1,3] : 1 
+Enter element [2,1] : 2 
+Enter element [2,2] : 2 
+Enter element [2,3] : 2 
+Enter element [3,1] : 3 
+Enter element [3,2] : 3 
+Enter element [3,3] : 3 
+
+Matrix after multiplying elements (result matrix): 
+14	14	14	 
+32	32	32	 
+50	50	50
+
+## 17. TRANSPOSE MATRIX
+----
+#include<stdio.h>
+int main()
+{ 
+        int m,n,i,j;
+        printf("enter the number of rows and columns of matrix\n");
+        scanf("%d%d",&m,&n);
+        int a[m][n],b[m][n] ;
+                printf("enter the elements of  matrix row wise\n");
+                for(i=0;i<m;i++)
+                {
+                        for(j=0;j<n;j++)
+                        {
+                                scanf("%d",&a[i][j]);
+                        }       
+                }       
+                
+                for(i=0;i<m;i++)
+                {
+                        for(j=0;j<n;j++)
+                        {
+                                b[j][i]=a[i][j];
+                        }       
+                }       
+                printf("transpose  of matrix is \n");
+                for(i=0;i<m;i++)
+                {
+                        for(j=0;j<n;j++)
+                        {
+                                printf("%d ",b[i][j]);
+                        }       
+                        printf("\n");
+                }       
+}               
+## Output of the program
+enter the number of rows and columns of matrix
+3
+3
+enter the elements of  matrix row wise
 1
-2
-Fizz
+6
 4
-Buzz
-Fizz
-7
+5
+3
+2
 8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
+9
+7
+transpose  of matrix is 
+1 5 8 
+6 3 9 
+4 2 7 
 ## 18. Program to print a Pyramid
 ----
+#include <stdio.h>
+int main() {
+    int i, space, rows, k = 0;
+    printf("Enter number of rows: ");
+    scanf("%d", &rows);
 
- #include<stdio.h>
- int main()
- {
- int i,j,n;
- printf("\nEnter number of Rows: ");
- scanf("%d",&n);
- printf("\n");
- 
- for(i=1; i<=n; i++)
- {
-     for(j=1; j<=2*n-1; j++)
-     {
-     if(j>=n-(i-1) && j<=n+(i-1))
-     printf("*");
-     else
-     printf(" ");
-     }
-     printf("\n");
-     }
-     return 0;
- }
+    for (i = 1; i <= rows; ++i, k = 0) {
+        for (space = 1; space <= rows - i; ++space) {
+            printf("  ");
+        }
+        while (k != 2 * i - 1) {
+            printf("* ");
+            ++k;
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ## Output of the program
  Enter number of Rows: 3
  
@@ -530,300 +594,275 @@ FizzBuzz
  ***********
 ## 19. Program of Linear search for One Dimensional array 
 ----
-
-#include<stdio.h>
-int main()
-
+#include <stdio.h>
+void main()
 {
-int array[12]={1,5,9,7,3,82,46,23,23,5,10,3};
-int size=12,flag=0,item,a;
-
-printf("\nEnter the Value: ");
-scanf("%d", &a);
-
-for(int i=0;i<size;i++)
-  {
-    if(a==array[i])
-      {
-            flag=a;
+    int a[10], i, item;
+    printf("\nEnter SEVEN elements of an array:\n");
+    for (i=0; i<=6; i++)
+        scanf("%d", &a[i]);
+    printf("\nEnter item to search: ");
+    scanf("%d", &item);
+    for (i=0; i<=9; i++)
+        if (item == a[i])
+        {
+            printf("\nItem found at location %d", i+1);
             break;
-      }
-  }
-  
-    if(flag==a)
-    printf("\nSearch is Sucessfull \n%d Element is present in the array\n",a);
-    else
-    printf("\nSearch is Unsucessfull \n%d Element is not present in the array\n",a);
-    
-    return 0;
+        }
+    if (i > 9)
+        printf("\nItem does not exist.");
+    getch();
 }
 ## Output of the program
-First Case
-
-Enter the Value to be searched: 5
-
-Search is Sucessfull 5 Element is present in the array
-Second Case
-
-Enter the Value to be searched: 2
-
-Search is Unsucessfull 2 Element is not present in the array
-## 20. Program of linear search with desirable values
+Enter SEVEN elements of an array:
+12 25 45 89 54 68 88
+Enter item to search: 89
+Item found at location 4
+## 20. CHECK PALINDROME NUMBER
 ----
-
 #include<stdio.h>
 int main()
 {
-
-int array[100],search,i,n;
-printf("\nEnter the Number of elements in array: ");
-scanf("%d",&n);
-printf("\n");
-
-  for(i=1;i<=n;i++)
-  {  printf("Enter [%d] element: ",i);
-     scanf("%d",&array[i]);  }
-  
-printf("\nEnter a number to search: ");
-scanf("%d",&search);
-
-   for(i=0;i<=n;i++)
-   {
-      if(array[i]==search)         //if element is found
-      {  printf("\n%d is present at location %d\n",search,i);
-         break;   }
-      else if(i>=n)
-      {  printf("\n%d is not present in the array\n",search);  }
-
-   }
-
-return 0;
+        int sum=0,digit;
+        int n, temp;
+        printf("enter any positive integer number\n");
+        scanf("%d",&n);
+        temp=n;
+        while(temp>0)
+        {
+                digit=temp%10;
+                temp/=10;
+                sum=sum*10+digit;
+        }
+        if(n==sum)
+                printf("\n %d is a palidrome number\n",n);
+        else
+                printf("\n %d is not a palidrome number\n",n);
 }
 ## Output of the program
-Enter the Number of elements in array: 5
-
-Enter [1] element: 1
-Enter [2] element: 2
-Enter [3] element: 3
-Enter [4] element: 4
-Enter [5] element: 5
-
-Enter a number to search: 8
-
-8 is not present in the array
+enter any positive integer number
+12321   
+        
+ 12321 is a palidrome number
+-------------------------------------------------------------------------
+enter any positive integer number
+12654   
+        
+ 12654 is not a palidrome number
 ## 21. Program to find Prime number 
 ----
+#include <stdio.h>
+int main() {
+    int n, i, flag = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
 
-  #include<stdio.h>
-  int main()
-  { 
-  int a;
-  printf("\nEnter the Number: ");
-  scanf("%d",&a);
+    for (i = 2; i < n / 2; ++i) {
 
-   for(int x=1;x<a;x++)
-   { 
-     if(a%x!=0)
-     {  printf("%d is a Prime Number",a);
-        break;  }
-     else
-     {  printf("%d is not a Prime Number",a);
-        break;  }
-    }
-  return 0;
-  }
-Output of the program
-  Enter the Number: 7
-  7 is not a Prime Number
-
-  Enter the Number: 8
-  8 is not a Prime Number
-## 21. Program of Linear search for One Dimensional array
-----
-
-#include<stdio.h>
-int main()
-
-{
-int array[12]={1,5,9,7,3,82,46,23,23,5,10,3};
-int size=12,flag=0,item,a;
-
-printf("\nEnter the Value: ");
-scanf("%d", &a);
-
-for(int i=0;i<size;i++)
-  {
-    if(a==array[i])
-      {
-            flag=a;
+        // condition for non-prime
+        if (n % i == 0) {
+            flag = 1;
             break;
-      }
-  }
-  
-    if(flag==a)
-    printf("\nSearch is Sucessfull \n%d Element is present in the array\n",a);
-    else
-    printf("\nSearch is Unsucessfull \n%d Element is not present in the array\n",a);
-    
+        }
+    }
+
+    if (n == 1) {
+        printf("1 is neither prime nor composite.");
+    }
+    else {
+        if (flag == 0)
+            printf("%d is a prime number.", n);
+        else
+            printf("%d is not a prime number.", n);
+    }
+
     return 0;
 }
+  ## Output of the program
+Enter a positive integer: 29
+29 is a prime number.
+
+  ## 22. CALL BY VALUE ----
+#include <stdio.h>
+void swap(int a,int b);
+void main()
+{
+int x,y;
+printf("\n Enter value for x:");
+scanf("%d",&x);
+printf("\n Enter value for y:");
+scanf("%d",&y);
+printf("\n Before calling swap functin\n");
+printf("\n Value of x=%d,Value of y=%d\n",x,y);
+swap(x,y);
+printf("\n After returning from swap function");
+printf("\n Value of x=%d,value of y=%d\n",x,y);
+}
+void swap(int a,int b)
+{
+int temp;
+printf("\n Inside the function \n");
+printf("\n Value of a=%d,Value of b=%d before swaping\n",a,b);
+temp=a;
+a=b;
+b=temp;
+printf("\n Value of a=%d,Value of b=%d after swaping\n",a,b);
+}
 ## Output of the program
-First Case
+Enter value for x:8
 
-Enter the Value to be searched: 5
+ Enter value for y:6
 
-Search is Sucessfull 5 Element is present in the array
-Second Case
+ Before calling swap functin
 
-Enter the Value to be searched: 2
+ Value of x=8,Value of y=6
 
-Search is Unsucessfull 2 Element
-## 22. Program of Multiplication of 2x2 Matrix 
+ Inside the function 
+
+ Value of a=8,Value of b=6 before swaping
+ Value of a=6,Value of b=8 after swaping
+
+ After returning from swap function
+ Value of x=8,value of y=6
+ 
+## 23. CALL BY REFERENCE
 ----
-
 #include<stdio.h>
-int main()
+void swap(int *,int *);
+void main()
 {
-float a,b,c,d,e,f,g,h,i,j,k,l;
-
-printf("\nSample of Ist matrix: | a=1      b=2 |\n                      | c=3      d=4 |\n\n\
-Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n\n");
-
-     printf("Enter The Valve of a: ");
-     scanf("%f",&a);
-     printf("Enter The Valve of b: ");
-     scanf("%f",&b);
-     printf("Enter The Valve of c: ");
-     scanf("%f",&c);
-     printf("Enter The Valve of d: ");
-     scanf("%f",&d);
-     printf("Enter The Valve of e: ");
-     scanf("%f",&e);
-     printf("Enter The Valve of f: ");
-     scanf("%f",&f);
-     printf("Enter The Valve of g: ");
-     scanf("%f",&g);
-     printf("Enter The Valve of h: ");
-     scanf("%f",&h); 
-
-     i=(a*e)+(b*g);
-     j=(a*f)+(b*h);
-     k=(c*e)+(d*g);
-     l=(c*f)+(d*h);
-
-     printf("\nMultiplication of A,B is: | %.2f     %.2f |\n                          | %.2f     %.2f |",i,j,k,l);
-
-     return 0;
+int x,y;
+printf("\n Enter value for x:");
+scanf("%d",&x);
+printf("\n Enter value for y:");
+scanf("%d",&y);
+printf("\n Before calling swap functin\n");
+printf("\n Value of x=%d,Value of y=%d\n",x,y);
+swap(&x,&y);
+printf("\n After returning from swap function");
+printf("\n Value of x=%d,value of y=%d\n",x,y);
 }
+void swap(int *a,int *b)
+{
+int temp;
+printf("\n Inside the function \n");
+printf("\n Value of a=%d,Value of b=%d before swaping\n",*a,*b);
+temp=*a;
+*a=*b;
+*b=temp;
+printf("\n Value of a=%d,Value of b=%d after swaping\n",*a,*b);
+}
+
 ## Output of the program
-Sample of Ist matrix: | a=1      b=2 |
-                      | c=3      d=4 |
-
-Sample of 2nd matrix: | e=5      f=6 |
-                      | f=7      h=8 |
-
-Enter The Valve of a: 7
-Enter The Valve of b: 5
-Enter The Valve of c: 4
-Enter The Valve of d: 0
-Enter The Valve of e: 3
-Enter The Valve of f: 5
-Enter The Valve of g: 9
-Enter The Valve of h: 1
-
-Multiplication of A,B is: | 66.00     40.00 |
-                          | 12.00     20.00 |
-## 23. Program to find largest of four numbers using function.
-----
-
+Enter value for x:6
+ Enter value for y:7
+ Before calling swap functin
+ Value of x=6,Value of y=7
+ Inside the function 
+ Value of a=6,Value of b=7 before swaping
+ Value of a=7,Value of b=6 after swaping
+ After returning from swap function
+ Value of x=7,value of y=6
+## 23. EMPLOYEE DETAILS USING STRUCTURE-----
 #include <stdio.h>
-int larg(int a,int b, int c,int d);
+#include <stdlib.h>
+ 
+typedef struct{
+ 
+    char name[30];
+    int id;
+    int salary;
+ 
+} Employee;
+ 
 int main()
 {
- int x,y,z,r;
- printf("Enter the numbers : ");
- scanf("%d %d %d %d",&x,&y,&z,&r);
- larg(x,y,z,r);
- return 0;
-}
+    int i, n=2;
  
-int larg(int a,int b,int c,int d)
-{
- if((a>b)&&(a>c)&&(a>d))
- {
-  printf("%d is largest\n",a);
- }
-else if((b>a)&&(b>c)&&(b>d))
- {
-  printf("%d is largest\n",b);
- }
-else if((c>a)&&(c>b)&&(c>d))
- {
-  printf("%d is largest\n",c);
- }
- else
- {
- printf("%d is largest\n",d);
- }
-return 0;
-}
-Output of the program
-Enter the numbers : 4 2 6 8
-8 is largest
-## 24. Program to swap using call by reference.
-----
-
+    Employee employees[n];
+ 
+    //Taking each employee detail as input
+ 
+    printf("Enter %d Employee Details \n \n",n);
+    for(i=0; i<n; i++){
+ 
+        printf("Employee %d:- \n",i+1);
+        //Name
+        printf("Name: ");
+        scanf("%s",employees[i].name);
+        //ID
+        printf("Id: ");
+        scanf("%d",&employees[i].id);
+        //Salary
+        printf("Salary: ");
+        scanf("%d",&employees[i].salary);
+ 
+        printf("\n");
+    }
+ 
+    //Displaying Employee details
+ 
+    printf("-------------- All Employees Details ---------------\n");
+ 
+    for(i=0; i<n; i++){
+ 
+        printf("Name \t: ");
+        printf("%s \n",employees[i].name);
+ 
+        printf("Id \t: ");
+        printf("%d \n",employees[i].id);
+ 
+        printf("Salary \t: ");
+        printf("%d \n",employees[i].salary);
+ 
+        printf("\n");
+    }
+ 
+    return 0;
+## output 
+enter employee code                                                                                                                             
+125                                                                                                                                             
+enter employee name                                                                                                                             
+Raghav                                                                                                                                          
+enter employee department                                                                                                                       
+electric                                                                                                                                        
+enter employee salary                                                                                                                           
+25000                                                                                                                                           
+information about employee is                                                                                                                   
+Employee code: 125                                                                                                                              
+Employee name: Raghav                                                                                                                           
+Employee department: electric                                                                                                                   
+Employee salary: 25000.000000
+ 
+ ## 24. SUM OF DIGITS OF A NUMBER
 #include <stdio.h>
-int swap(int ,int );
+
 int main()
 {
- int a,b;
- printf("Enter the two numbers : ");
- scanf("%d %d",&a,&b);
- printf("Before swaping %d %d\n",a,b);
- swap(a,b);
- return 0;
+    int num, sum=0;
+
+    /* Input a number from user */
+    printf("Enter any number to find sum of its digit: ");
+    scanf("%d", &num);
+
+    /* Repeat till num becomes 0 */
+    while(num!=0)
+    {
+        /* Find last digit of num and add to sum */
+        sum += num % 10;
+
+        /* Remove last digit from num */
+        num = num / 10;
+    }
+
+    printf("Sum of digits = %d", sum);
+
+    return 0;
 }
- 
-int swap(int a,int b)
-{
- int *x,*y;
- x=&a;
- y=&b;
- printf("After swapping : %d %d\n",*y,*x);
- return 0;
-}
+
 Output of the program
-Enter the two numbers : 8 5
-Before swaping 8 5
-After swapping : 5 8
+Enter any number to find sum of its digit: 1234
+Sum of digits = 10
 
                                                   **ThankYou**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
