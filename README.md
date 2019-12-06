@@ -1,23 +1,34 @@
-PROGRAMMING FOR PROGRAM SOLVING ESC-18105
-NAME-MANJOT SINGH SRAN
-ROLL NO-1915048
-BRANCH-COMPUTER SCIENCE
-SECTION-CS(A2)
-Submitted to : Prof Hardeep Singh
+# PROGRAMMING FOR PROGRAM SOLVING ESC-18105
+## NAME-MANJOT SINGH SRAN
+----
 
-1.Program to print Hello World
+## ROLL NO-1915048
+----
+
+## BRANCH-COMPUTER SCIENCE AND ENGINEERING
+## SECTION-CS(A2)
+## Submitted to : Prof Hardeep Singh
+
+## 1.Program to print Hello World
+----
+
 #include<stdio.h>
 int main()
 {
  puts("Hello World");
  return 0;
 }
-Output of the program
-Hello World
-2. Program to find Sum
+##  Output of the program
+Hello World 
+
+----
+
+## 2. Program to find Sum
+----
+
 #include<stdio.h>
 int main()
-{  
+{ 
      float x,y,z;
 
      printf("Enter The First Number: ");
@@ -28,13 +39,15 @@ int main()
      printf("\nAnswer is: = %.3f", z);
      return 0;
 }
-Output of the program
+## Output of the program
 Enter The First Number: 45.26
 
 Enter The Second Number: 78.2648
 
 Answer is: = 123.525
-3. Program to print a Table
+## 3. Program to print a Table
+----
+
 #include<stdio.h>
 int main()
 {
@@ -53,7 +66,9 @@ int main()
      }
      return 0;
 }
-Output of the program
+## Output of the program
+----
+
 73.0 x 1 = 73.00
 73.0 x 2 = 146.00
 73.0 x 3 = 219.00
@@ -61,7 +76,9 @@ Output of the program
 73.0 x 5 = 365.00
 73.0 x 6 = 438.00
 73.0 x 7 = 511.00
-4. Program to find Area, Perimeter of a Rectangle
+## 4. Program to find Area, Perimeter of a Rectangle
+----
+
 #include<stdio.h>
 int main()
 {
@@ -81,7 +98,7 @@ int main()
 
      return 0;
 }
-Output of the program
+## Output of the program
 Enter length: 24
 
 Enter Breadth: 60
@@ -89,7 +106,9 @@ Enter Breadth: 60
 Area: = 1440.000
 
 Perimeter: = 168.000
-5. Program to find Interest
+## 5. Program to find Interest
+----
+
 #include<stdio.h>
 int main()
 {
@@ -108,7 +127,7 @@ int main()
      printf("\nSimple Intesest is: = %.2f", Interest);
      return Interest;
 }
-Output of the program
+## Output of the program
 Enter The Principal Amount: 4000
 
 Enter The Interest Rate: 4
@@ -116,7 +135,9 @@ Enter The Interest Rate: 4
 Enter The Time (in months): 3
 
 Simple Intesest is: = 480.00
-6.Program to find Maximum
+## 6.Program to find Maximum 
+----
+
 #include<stdio.h>
 int max(float x,float y);
 int main()
@@ -146,13 +167,15 @@ int main()
 
      return result;
 }
-Output of the program
+## Output of the program
 Enter The First Value: 5
 
 Enter The Second Value: 4
 
 Maximum value is: 5.00
-7.Program To find Minimum
+## 7.Program To find Minimum 
+----
+
 #include<stdio.h>
 int min(float x,float y);
 int main()
@@ -184,13 +207,15 @@ int min(float x,float y)
 
      return result;
 }
-Output of the program
+## Output of the program
 Enter The First Value: 5
 
 Enter The SecondValue: 3
 
 Minimum value is: 3.00
-8.Program to use Arithmetic Operators
+## 8.Program to use Arithmetic Operators  
+----
+
 #include<stdio.h>
 int main()
 {
@@ -217,7 +242,7 @@ int main()
 
      return 0;
 }
-Output of the program
+## Output of the program
 Enter The Value of x: 45
 
 Enter The Value of y: 31
@@ -227,7 +252,9 @@ y - x = -14.000
 x * y = 1395.000
 x/y = 1.452
 y/x = 0.689
-9. Program to use Assignment Operators
+## 9. Program to use Assignment Operators
+----
+
 #include<stdio.h>
 int main()
 {
@@ -250,14 +277,16 @@ int main()
 
      return 0;
 }
-Output of the program
+## Output of the program
 Enter The Value of x: 45
 Answer is a = x 45.000
 Answer is a+x = 90.000
 Answer is a-x = 45.000
 Answer is a*x = 2025.000
 Answer is a/x= 45.000
-10. Program to find Average
+## 10. Program to find Average
+----
+
 #include<stdio.h>
 float average();
 
@@ -290,7 +319,9 @@ Enter The Second Value: 34
 Enter The Third Value: 18
 
 Average is: 32.33
-12. Program to find FizzBuzz od a Integer
+## 12. Program to find FizzBuzz od a Integer
+----
+
 #include<stdio.h>
 int main()
 {
@@ -308,10 +339,12 @@ int main()
      printf("\n%d",n);
      return 0;
 }
-Output of the program
+## Output of the program
 Enter the Interger: 171
 Fizz
-13. Program of print a Calculator using puts function
+## 13. Program of print a Calculator using puts function 
+----
+
 #include<stdio.h>
 void main()
 {
@@ -326,7 +359,7 @@ void main()
      |     0     | * |\n\
      |___________|___|\n");
 }
-Output of the program
+## Output of the program
  _______________
 | 1 | 2 | 3 |   |
 |___|___|___|   |
@@ -336,7 +369,9 @@ Output of the program
 |___|___|___|___|
 |     0     | * |
 |___________|___|
-14. Program to print a Face using puts function
+## 14. Program to print a Face using puts function 
+----
+
 #include<stdio.h>
 void main()
 {
@@ -350,7 +385,7 @@ void main()
      puts("|       |      |");
      puts("|_______|______|\n");
 }
-Output of the program
+## Output of the program
  ______________
 |   XXXXXXXXX  |
 |   ( ^   ^ )  |
@@ -360,7 +395,9 @@ Output of the program
 |      \_/     |
 |       |      |
 |_______|______|
-15. Program of Multiplication of 2x2 Matrix
+## 15. Program of Multiplication of 2x2 Matrix
+----
+
 #include<stdio.h>
 int main()
 {
@@ -395,7 +432,7 @@ Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n
 
      return 0;
 }
-Output of the program
+## Output of the program
 Sample of Ist matrix: | a=1      b=2 |
                       | c=3      d=4 |
 
@@ -413,7 +450,9 @@ Enter The Valve of h: 1
 
 Multiplication of A,B is: | 66.00     40.00 |
                           | 12.00     20.00 |
-17. Program of FizzBuzz in a continues loop
+## 17. Program of FizzBuzz in a continues loop 
+----
+
 #include<stdio.h>
 int main()
 {
@@ -436,7 +475,7 @@ int main()
 
      return 0;
 }
-Output of the program
+## Output of the program
 Enter The Integer: 17
 
 1
@@ -456,7 +495,9 @@ Fizz
 FizzBuzz
 16
 17
-18. Program to print a Pyramid
+## 18. Program to print a Pyramid
+----
+
  #include<stdio.h>
  int main()
  {
@@ -478,8 +519,8 @@ FizzBuzz
      }
      return 0;
  }
-Output of the program
- Enter number of Rows: 6
+## Output of the program
+ Enter number of Rows: 3
  
       *  
      ***    
@@ -487,7 +528,9 @@ Output of the program
    *******  
   ********* 
  ***********
-19. Program of Linear search for One Dimensional array
+## 19. Program of Linear search for One Dimensional array 
+----
+
 #include<stdio.h>
 int main()
 
@@ -514,7 +557,7 @@ for(int i=0;i<size;i++)
     
     return 0;
 }
-Output of the program
+## Output of the program
 First Case
 
 Enter the Value to be searched: 5
@@ -525,7 +568,9 @@ Second Case
 Enter the Value to be searched: 2
 
 Search is Unsucessfull 2 Element is not present in the array
-20. Program of linear search with desirable values
+## 20. Program of linear search with desirable values
+----
+
 #include<stdio.h>
 int main()
 {
@@ -554,7 +599,7 @@ scanf("%d",&search);
 
 return 0;
 }
-Output of the program
+## Output of the program
 Enter the Number of elements in array: 5
 
 Enter [1] element: 1
@@ -566,7 +611,9 @@ Enter [5] element: 5
 Enter a number to search: 8
 
 8 is not present in the array
-21. Program to find Prime number
+## 21. Program to find Prime number 
+----
+
   #include<stdio.h>
   int main()
   { 
@@ -591,7 +638,9 @@ Output of the program
 
   Enter the Number: 8
   8 is not a Prime Number
-21. Program of Linear search for One Dimensional array
+## 21. Program of Linear search for One Dimensional array
+----
+
 #include<stdio.h>
 int main()
 
@@ -618,7 +667,7 @@ for(int i=0;i<size;i++)
     
     return 0;
 }
-Output of the program
+## Output of the program
 First Case
 
 Enter the Value to be searched: 5
@@ -629,7 +678,9 @@ Second Case
 Enter the Value to be searched: 2
 
 Search is Unsucessfull 2 Element
-22. Program of Multiplication of 2x2 Matrix
+## 22. Program of Multiplication of 2x2 Matrix 
+----
+
 #include<stdio.h>
 int main()
 {
@@ -664,7 +715,7 @@ Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n
 
      return 0;
 }
-Output of the program
+## Output of the program
 Sample of Ist matrix: | a=1      b=2 |
                       | c=3      d=4 |
 
@@ -682,7 +733,9 @@ Enter The Valve of h: 1
 
 Multiplication of A,B is: | 66.00     40.00 |
                           | 12.00     20.00 |
-23. Program to find largest of four numbers using function.
+## 23. Program to find largest of four numbers using function.
+----
+
 #include <stdio.h>
 int larg(int a,int b, int c,int d);
 int main()
@@ -717,7 +770,9 @@ return 0;
 Output of the program
 Enter the numbers : 4 2 6 8
 8 is largest
-24. Program to swap using call by reference.
+## 24. Program to swap using call by reference.
+----
+
 #include <stdio.h>
 int swap(int ,int );
 int main()
@@ -744,44 +799,6 @@ Before swaping 8 5
 After swapping : 5 8
 
                                                   **ThankYou**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
