@@ -1,5 +1,3 @@
-
-
 PROGRAMMING FOR PROGRAM SOLVING ESC-18105
 NAME-MANJOT SINGH SRAN
 ROLL NO-1915048
@@ -747,19 +745,9 @@ After swapping : 5 8
 
                                                   **ThankYou**
 
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
 
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
+
 
 
 
